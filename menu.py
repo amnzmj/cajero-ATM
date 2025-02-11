@@ -2,14 +2,33 @@ from tkinter import *
 import subprocess
 
 def abrir_retiro():
+    """
+    abre la ventana de retiro de dinero.
+
+    Esta función cierra la ventana actual del menú principal y ejecuta "retiro"
+    
+
+    :return: None
+    """
     menu_window.quit()
     subprocess.Popen(["python","retiro.py"])
 
 def abrir_saldo():
+    """
+    abre la ventana de consulta de saldo.
+
+    :return: None
+    """
     menu_window.quit()
     subprocess.Popen(["python","saldo.py"])
 
 def abrir_deposito():
+    """
+    abrir la interfaz de depósito de dinero
+
+    
+    :return: None
+    """
     menu_window.quit()
     subprocess.Popen(["python","deposito.py"])
 

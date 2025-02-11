@@ -2,13 +2,28 @@ from tkinter import *
 import subprocess
 
 def confirmar():
+    """
+    confirma el retiro y abre la ventana de "completado".
+    
+    simula que el retiro
+    ha sido realizado.
+
+    :return: None
+    """
     retiro_window.destroy()
     subprocess.Popen(["python","completado.py"])
 
 def volver_menu():
+    """
+    cierra la ventana actual y vuelve al menú principal.
+
+
+    :return: None
+    """
     retiro_window.destroy()  # Cierra esta ventana
     subprocess.Popen(["python", "menu.py"])  # Abre el menú
 
+# Ventana para el retiro de dinero
 retiro_window = Tk()
 retiro_window.title("Cajero - Retiro de Dinero")
 retiro_window.geometry("800x500")

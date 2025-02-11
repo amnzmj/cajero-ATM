@@ -1,11 +1,17 @@
 from tkinter import *
 import subprocess  
 
-# Función para volver automáticamente al menú después de unos segundos
 def volver_menu():
+    """
+    cierra la ventana actual y vuelve al menú principal.
+
+    cierra la ventana de "Operación Exitosa"
+    :return: None
+    """
     confirmar_window.destroy()  
     subprocess.Popen(["python", "menu.py"])  
 
+# Ventana de confirmación de operación exitosa
 confirmar_window = Tk()
 confirmar_window.title("Cajero - Operación Exitosa")
 confirmar_window.geometry("400x300")

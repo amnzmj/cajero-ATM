@@ -1,12 +1,22 @@
 from tkinter import *
 import subprocess
 
+# Diccionario que contiene las cuentas de los usuarios, su nombre, saldo y PIN.
 cuentas = {
     "12345678": {"nombre": "diego", "saldo": 5000, "pin": "1234"},
     "87654321": {"nombre": "dani", "saldo": 3000, "pin": "8888"},
 }
 
 def abrir_menu():
+    """
+    Función que abre el menú del cajero automático después de verificar el número de cuenta
+    y el PIN ingresados.
+
+    valida si el número de cuenta y el PIN coinciden 
+    datos almacenados en el diccionario `cuentas`.
+    
+    :return: None
+    """
     numero_cuenta = entrada_cuenta.get()
     pin = entrada_PIN.get()
 
@@ -42,6 +52,3 @@ etiqueta_error.pack(pady=10)
 
 # Mantiene la ventana abierta
 main_window.mainloop()
-
-
-
